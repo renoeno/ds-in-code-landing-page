@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { ThemeProvider } from "./hooks/ThemeContext";
 import "./index.scss";
-import App from "./App";
+import App from "./pages/App";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider brand="marca-a" themeName="tema-1" mode="light">
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 
